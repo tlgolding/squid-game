@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Korean Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the button for a random Korean word!</h1>
+    <button onclick="showWord()">Get Word</button>
+    <p id="wordDisplay"></p>
+
+    <script>
+        const words = ["사랑 (love)", "친구 (friend)", "학교 (school)", "음악 (music)", "책 (book)",
+    "밥 (meal)", "집 (house)", "날씨 (weather)", "하늘 (sky)", "행복 (happiness)",
+    "가족 (family)", "여행 (travel)", "영화 (movie)", "커피 (coffee)", "아이 (child)",
+    "강아지 (puppy)", "고양이 (cat)", "비 (rain)", "별 (star)", "꽃 (flower)",
+    "산 (mountain)", "바다 (sea)", "자동차 (car)", "컴퓨터 (computer)", "전화 (phone)",
+    "노래 (song)", "게임 (game)", "학교 (school)", "친구 (friend)", "하루 (day)",
+    "좋아 (like)", "웃다 (laugh)", "슬프다 (sad)", "행복하다 (happy)", "감사하다 (thankful)",
+    "조용하다 (quiet)", "시끄럽다 (noisy)", "아침 (morning)", "저녁 (evening)", "밤 (night)"];
+
+        function showWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            document.getElementById("wordDisplay").textContent = words[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
